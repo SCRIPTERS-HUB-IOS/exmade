@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExmadeHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login-screen">
+    <h2>Login</h2>
+    <input type="text" placeholder="Username" id="username" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="main-app" style="display:none;">
+    <header>
+      <h1>ExmadeHub</h1>
+      <button onclick="openSettings()">⚙️</button>
+    </header>
+    <main>
+      <div class="button" onclick="navigate('methods')">Methods</div>
+      <div class="button" onclick="window.open('https://discord.gg/WA2bUWCZJD')">Discord</div>
+    </main>
+
+    <section id="methods" class="hidden">
+      <div class="back" onclick="goBack()">← Back</div>
+      <div class="button" onclick="window.open('https://logged.tg/tools/refresher')">Cookie Refresher</div>
+      <div class="button" onclick="window.open('https://www.logged.tg/auth/exmade')">Beam no1</div>
+      <div class="button" onclick="window.open('https://immortal.st/dashboard')">Beam no2 (best)</div>
+      <div class="button" onclick="window.open('https://dsprs.vercel.app/hyperlink')">Hyperlink Generator</div>
+    </section>
+
+    <section id="settings" class="hidden">
+      <div class="back" onclick="goBack()">← Back</div>
+      <h2>Customize Theme</h2>
+      <button onclick="setTheme('purple')">Purple</button>
+      <button onclick="setTheme('light')">Light</button>
+      <button onclick="setTheme('dark')">Dark</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
